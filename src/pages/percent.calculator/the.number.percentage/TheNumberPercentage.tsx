@@ -7,7 +7,7 @@ export const TheNumberPercentage = () => {
 
     function calculate(): void {
         var coefficient: number = number / 100;
-        setResult(coefficient * percentage)
+        setResult(Math.round((coefficient * percentage) * 100) / 100)
     }
 
     function resetAll(): void {
