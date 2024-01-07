@@ -1,0 +1,14 @@
+.percentCalculator {
+    .theNumberPercentage {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+
+        form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
