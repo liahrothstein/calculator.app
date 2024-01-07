@@ -24,11 +24,11 @@ export const TheNumberPercentageOfTheNumber = () => {
                 <input
                     type="number"
                     value={firstNumber}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFirstNumber((typeof e.target.value === 'string') ? +e.target.value : e.target.value)} /> от числа
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFirstNumber(+e.target.value)} /> от числа
                 <input
                     type="number"
                     value={secondNumber}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSecondNumber((typeof e.target.value === 'string') ? +e.target.value : e.target.value)} />
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSecondNumber(+e.target.value)} />
                 <button
                     type="button"
                     onClick={calculate}>Посчитать</button>
