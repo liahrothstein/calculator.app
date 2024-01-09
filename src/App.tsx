@@ -1,6 +1,5 @@
 import React from 'react';
-import { RoutesContent } from './components/routes.content';
-import { Header } from './components/header';
+import { Header, RoutesContent } from './components';
 import './App.scss';
 
 export const App = () => {

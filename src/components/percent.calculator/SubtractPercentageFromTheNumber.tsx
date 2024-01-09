@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { Input } from "..";
 
-export const AddPercentageToTheNumber = () => {
+export const SubtractPercentageFromTheNumber = () => {
     const [percentage, setPercentage] = useState<number>(0);
     const [number, setNumber] = useState<number>(0);
     const [result, setResult] = useState<number>(0);
@@ -8,7 +9,7 @@ export const AddPercentageToTheNumber = () => {
     function calculate(): void {
         var coefficient: number = number / 100;
         var theNumberPercentage: number = coefficient * percentage;
-        setResult(Math.round((theNumberPercentage + number) * 100) / 100)
+        setResult(Math.round((number - theNumberPercentage) * 100) / 100)
     }
 
     function resetAll(): void {
@@ -18,18 +19,12 @@ export const AddPercentageToTheNumber = () => {
     }
 
     return (
-        <div className="addPercentageToTheNumber">
-            <div className="result">{`Прибавить ${percentage}% к числу ${number} = ${result}`}</div>
+        <div className="subtractPercentageFromTheNumber">
+            <div className="result">{`Вычесть ${percentage}% от числа ${number} = ${result}`}</div>
             <form>
-                Прибавить
-                <input
-                    type="number"
-                    value={percentage}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPercentage(+e.target.value)} /> % к числу
-                <input
-                    type="number"
-                    value={number}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNumber(+e.target.value)} />
+                Вычесть
+                <Input value={percentage} stateDispatch={setPercentage} /> % от числа
+                <Input value={number} stateDispatch={setNumber} />
                 <button
                     type="button"
                     onClick={calculate}>Посчитать</button>

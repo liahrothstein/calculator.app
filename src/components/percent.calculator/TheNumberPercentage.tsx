@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Input } from "..";
 
 export const TheNumberPercentage = () => {
     const [percentage, setPercentage] = useState<number>(0);
@@ -21,14 +22,8 @@ export const TheNumberPercentage = () => {
             <div className="result">{`${percentage}% от числа ${number} = ${result}`}</div>
             <form>
                 Сколько составляет
-                <input
-                    type="number"
-                    value={percentage}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPercentage(+e.target.value)} />% от числа
-                <input
-                    type="number"
-                    value={number}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNumber(+e.target.value)} />
+                <Input value={percentage} stateDispatch={setPercentage} />% от числа
+                <Input value={number} stateDispatch={setNumber} />
                 <button
                     type="button"
                     onClick={calculate}>Посчитать</button>

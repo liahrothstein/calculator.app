@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { Home } from '../../pages/home';
 import { PercentCalculator } from '../../pages/percent.calculator';
-import './routes.content.scss';
 
 export const RoutesContent = () => {
 
