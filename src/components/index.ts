@@ -1,5 +1,6 @@
 export { Header } from "./header/Header";
 export { Input } from "./input/Input";
+export { Button } from "./button/Button";
 export { RoutesContent } from "./routes.content/RoutesContent";
 export { AddPercentageToTheNumber } from "./percent.calculator/AddPercentageToTheNumber";
 export { SubtractPercentageFromTheNumber } from "./percent.calculator/SubtractPercentageFromTheNumber";

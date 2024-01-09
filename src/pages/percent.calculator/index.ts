@@ -1,1 +1,0 @@
-export { PercentCalculator } from "./PercentCalculator";
