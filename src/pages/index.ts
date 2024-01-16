@@ -1,2 +1,2 @@
-export { PercentCalculator } from "./percent.calculator/PercentCalculator";
-export { Home } from "./home/Home";
+export { Home } from './home/ui/Home';
+export { PercentCalculator } from './percent.calculator/ui/PercentCalculator';
