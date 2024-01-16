@@ -1,5 +1,4 @@
-import React from 'react';
-import { Header, RoutesContent } from './components';
+import { Header, RoutesContent } from '../widgets';
 import './App.scss';
 
 export const App = () => {

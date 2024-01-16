@@ -1,21 +1,11 @@
 import { useState } from "react";
-import { Input, Button } from "..";
+import { Input, Button } from "../../../shared";
+import { calculate, resetAll } from '../model'
 
 export const TheNumberPercentageOfTheNumber = () => {
     const [firstNumber, setFirstNumber] = useState<number>(0);
     const [secondNumber, setSecondNumber] = useState<number>(0);
     const [percentage, setPercentage] = useState<number>(0);
-
-    function calculate(): void {
-        var coefficient: number = secondNumber / firstNumber;
-        setPercentage(Math.round((100 / coefficient) * 100) / 100)
-    }
-
-    function resetAll(): void {
-        setFirstNumber(0);
-        setSecondNumber(0);
-        setPercentage(0)
-    }
 
     return (
         <div className="theNumberPercentageOfTheNumber">
@@ -24,8 +14,8 @@ export const TheNumberPercentageOfTheNumber = () => {
                 Сколько % составляет число
                 <Input value={firstNumber} stateDispatch={setFirstNumber} /> от числа
                 <Input value={secondNumber} stateDispatch={setSecondNumber} />
-                <Button textValue={'Посчитать'} onClickHandler={calculate} />
-                <Button textValue={'Сбросить Все'} onClickHandler={resetAll} />
+                <Button textValue={'Посчитать'} onClickHandler={() => setPercentage(calculate(firstNumber, secondNumber))} />
+                <Button textValue={'Сбросить Все'} onClickHandler={() => resetAll(setFirstNumber, setSecondNumber, setPercentage)} />
             </form>
         </div>
     )

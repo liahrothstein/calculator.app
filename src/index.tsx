@@ -1,9 +1,9 @@
 import React from 'react';
+import { HashRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import { App } from './App';
+import { App } from './app/App';
 import './index.scss';
-import { HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
