@@ -1,7 +1,7 @@
 import { Header, RoutesContent } from '../widgets';
 import './App.scss';
 
-export const App = () => {
+export default function App() {
 
   return (
     <div className="App">

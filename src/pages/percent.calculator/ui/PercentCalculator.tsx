@@ -1,8 +1,8 @@
 
 import { AddPercentageToTheNumber, SubtractPercentageFromTheNumber, TheNumberPercentage, TheNumberPercentageOfTheNumber } from '../../../features';
-import './percent.calculator.scss';
+import './PercentCalculator.scss';
 
-export const PercentCalculator = () => {
+export default function PercentCalculator() {
 
     return (
         <div className="percentCalculator">

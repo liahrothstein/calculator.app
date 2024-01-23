@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Input, Button } from "../../../shared";
 import { calculate, resetAll } from '../model'
 
-export const TheNumberPercentageOfTheNumber = () => {
+export default function TheNumberPercentageOfTheNumber() {
     const [firstNumber, setFirstNumber] = useState<number>(0);
     const [secondNumber, setSecondNumber] = useState<number>(0);
     const [percentage, setPercentage] = useState<number>(0);

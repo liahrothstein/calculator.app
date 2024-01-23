@@ -1,10 +1,10 @@
-import './home.scss';
+import './Home.scss';
 
-export const Home = () => {
+export default function Home() {
 
     return (
         <div className="home">
-            
+
         </div>
     )
 }
