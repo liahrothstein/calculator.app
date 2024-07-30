@@ -7,6 +7,7 @@ export default function Header() {
         <div className="header">
             <Link to='/'>Главная</Link>
             <Link to='/percent-calculator'>Калькулятор Процентов</Link>
+            <Link to='/salary-calculator'>Калькулятор ЗП</Link>
         </div>
     )
 }

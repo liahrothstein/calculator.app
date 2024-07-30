@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Home, PercentCalculator } from '../../../pages';
+import { Home, PercentCalculator, SalaryCalculator } from '../../../pages';
 
 export default function RoutesContent() {
 
@@ -8,6 +8,7 @@ export default function RoutesContent() {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/percent-calculator' element={<PercentCalculator />} />
+                <Route path='/salary-calculator' element={<SalaryCalculator />} />
             </Routes>
         </div>
     )
