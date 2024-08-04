@@ -1,4 +1,4 @@
-import { PercentageDispatch, NumberDispatch, ResultDispatch } from '../../../shared';
+import type { PercentageDispatch, NumberDispatch, ResultDispatch } from '../../../shared/types';
 
 export default function resetAll(setPercentage: PercentageDispatch, setNumber: NumberDispatch, setResult: ResultDispatch): void {
     setPercentage(0);

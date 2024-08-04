@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Input, Button } from "../../../shared";
+import { Input, Button } from "../../../shared/ui";
 import { calculate, resetAll } from '../model'
 
 export default function SubtractPercentageFromTheNumber() {

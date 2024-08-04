@@ -1,3 +1,5 @@
+import { Classes } from '../../../shared/types';
+
 function calculateEfficiency(leads: number, numberOfHours: number) {
     let efficiency = (leads / numberOfHours);
 
@@ -64,7 +66,7 @@ function calculateBonus(leads: number, scores: number): number {
     return (bonus);
 };
 
-export function calculateWages(leads: number, numberOfHours: number) {
+export function calculateWages(leads: number, numberOfHours: number): number[] {
     let efficiency = calculateEfficiency(leads, numberOfHours);
     let hourRate = calculateHourRate(efficiency);
     let scores = calculateScores(efficiency);
@@ -74,4 +76,25 @@ export function calculateWages(leads: number, numberOfHours: number) {
     let wages = (salary + bonus);
 
     return [efficiency, salary, bonus, wages];
+};
+
+export function computeClass(leads: number, numberOfHours: number): Classes {
+    let efficiency = calculateEfficiency(leads, numberOfHours);
+
+    switch (efficiency) {
+        case 0.7:
+            return (Classes.Professional);
+            break;
+        case 0.5:
+            return (Classes.Expert);
+            break;
+        case 0.3:
+            return (Classes.FirstClass);
+            break;
+        case 0.25:
+            return (Classes.SecondClass);
+            break;
+        default:
+            return (Classes.ThirdClass)
+    }
 };
